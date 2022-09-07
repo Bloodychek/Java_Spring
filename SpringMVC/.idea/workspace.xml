@@ -9,12 +9,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4277c3d9-9753-4cc5-b005-bdad312697ee" name="Changes" comment="">
+    <list default="true" id="b0a7378a-e00f-4ee3-8e51-8251fb0719ec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/egorov/spring/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/egorov/spring/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContextMVC.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/egorov/spring/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/egorov/spring/config/MySpringMvcDispatcherServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/egorov/spring/config/SpringConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello_world.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/by/egorov/spring/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/by/egorov/spring/config/MySpringMvcDispatcherServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/by/egorov/spring/config/SpringConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/attoparser-2.0.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/slf4j-api-1.7.32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-aop-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-beans-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-context-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-core-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-expression-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-jcl-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-web-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/spring-webmvc-5.3.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/thymeleaf-3.1.0.M2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/thymeleaf-spring6-3.1.0.M2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/views/hello_world.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVC/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/egorov/spring/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/egorov/spring/config/MySpringMvcDispatcherServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/egorov/spring/config/SpringConfig.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +50,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -41,24 +68,24 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2ECYufPTR00BrVY8Tdw2KxzL2Bv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2ENw4iYhw5m4LYf7ysZgNn1xmff" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "spring.configuration.checksum": "ebf85741b99c595fd8e371acde50121c"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.0.23" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -69,7 +96,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="f6f58df2-50b0-415c-8951-f107a1660840" />
+        <option name="BASE_DIRECTORY_NAME" value="51ac9cd5-1681-437d-9049-789733e48649" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -77,7 +104,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54530" />
+        <option name="DEBUG_PORT" value="52193" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -150,14 +177,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4277c3d9-9753-4cc5-b005-bdad312697ee" name="Changes" comment="" />
-      <created>1662101263933</created>
+      <changelist id="b0a7378a-e00f-4ee3-8e51-8251fb0719ec" name="Changes" comment="" />
+      <created>1662449171832</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662101263933</updated>
-      <workItem from="1662101263935" duration="463000" />
-      <workItem from="1662101780161" duration="2313000" />
-      <workItem from="1662107749252" duration="1852000" />
+      <updated>1662449171832</updated>
+      <workItem from="1662449174893" duration="5102000" />
+      <workItem from="1662536112335" duration="4792000" />
     </task>
     <servers />
   </component>
