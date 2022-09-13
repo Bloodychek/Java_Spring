@@ -13,28 +13,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/egorov/by/config/MySpringMvcDispatcherSerlvetIntitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/egorov/by/config/MySpringMvcDispatcherSerlvetIntitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/egorov/by/controllers/FirstController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/egorov/by/controllers/SecondController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/first/calculator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/first/goodbye.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/first/hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/second/exit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/egorov/by/config/MySpringMvcDispatcherSerlvetIntitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/egorov/by/config/MySpringMvcDispatcherSerlvetIntitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/egorov/by/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/egorov/by/config/SpringConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/egorov/by/config/MySpringMvcDispatcherSerlvetIntitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/egorov/by/config/MySpringMvcDispatcherSerlvetIntitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/egorov/by/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/egorov/by/config/SpringConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/egorov/by/controllers/FirstController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/egorov/by/controllers/SecondController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/egorov/by/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/egorov/by/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/egorov/by/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/egorov/by/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +165,7 @@
       <workItem from="1662536112335" duration="4792000" />
       <workItem from="1662986410847" duration="3979000" />
       <workItem from="1663053838140" duration="2827000" />
+      <workItem from="1663057697953" duration="1003000" />
     </task>
     <servers />
   </component>
