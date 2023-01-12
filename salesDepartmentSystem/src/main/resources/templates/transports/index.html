@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Transport</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<h1 align="center">Transport</h1>
+<a th:href="@{/transports/create}" class="btn btn-primary btn-sm mb-3"> Add new record </a>
+<table class="table" align="center">
+    <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Tractor</th>
+        <th>Tractor brand</th>
+        <th>Semitrailer</th>
+        <th>Semitrailer brand</th>
+        <th>Driver fio</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="tr : ${transports}">
+        <td><span th:text="${tr.id}">Id</span></td>
+        <td><span th:text="${tr.tractor}">Tractor</span></td>
+        <td><span th:text="${tr.tractorBrand}">Tractor brand</span></td>
+        <td><span th:text="${tr.semitrailer}">Semitrailer</span></td>
+        <td><span th:text="${tr.semi_trailerBrand}">Semitrailer brand</span></td>
+        <td><span th:text="${tr.driverFIO}">Driver fio</span></td>
+        <td> <a th:href="@{/transports/edit/{id}(id=${tr.id})}" class="btn btn-primary">Edit</a>
+            <a th:href="@{/transports/delete/{id}(id=${tr.id})}" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div th:if="${totalPages > 1}">
+    <div class="row col-sm-10">
+        <div class="col-sm-2">
+            Total Rows: [[${totalItems}]]
+        </div>
+        <div class="col-sm-1">
+            <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+      <a th:if="${currentPage != i}" th:href="@{'/transports/page/' + ${i}}">[[${i}]]</a>
+      <span th:unless="${currentPage != i}">[[${i}]]</span>
+            </span>
+        </div>
+        <div class="col-sm-1">
+            <a th:if="${currentPage < totalPages}" th:href="@{'/transports/page/' + ${currentPage + 1}}">Next</a>
+            <span th:unless="${currentPage < totalPages}">Next</span>
+        </div>
+
+        <div class="col-sm-1">
+            <a th:if="${currentPage < totalPages}" th:href="@{'/transports/page/' + ${totalPages}}">Last</a>
+            <span th:unless="${currentPage < totalPages}">Last</span>
+        </div>
+    </div>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

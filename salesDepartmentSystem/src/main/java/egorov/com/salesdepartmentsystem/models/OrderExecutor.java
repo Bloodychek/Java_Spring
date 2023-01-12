@@ -14,13 +14,17 @@ import javax.validation.constraints.NotEmpty;
 @Table(name = "orderexecutors")
 public class OrderExecutor {
     @Id
+    @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @NotEmpty
+    @Column(name = "orderExecutorName")
     private String orderExecutorName;
     @NotEmpty
+    @Column(name = "orderExecutorPhone")
     private String orderExecutorPhone;
     @NotEmpty
+    @Column(name = "orderExecutorFeedback")
     private String orderExecutorFeedback;
 
     public OrderExecutor(String orderExecutorName, String orderExecutorPhone, String orderExecutorFeedback) {

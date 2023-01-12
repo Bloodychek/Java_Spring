@@ -4,9 +4,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.validation.constraints.NotEmpty;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -16,38 +20,45 @@ import java.util.Date;
 @Table(name = "applications")
 public class Application {
     @Id
+    @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @NotEmpty
-    private Date uploadDate;
+    @DateTimeFormat(pattern = "dd-M-yyyy hh:mm:ss")
+    @Column(name = "uploadDate")
+    private LocalDateTime uploadDate;
     @NotEmpty
-    private Date unloadingDate;
+    @DateTimeFormat(pattern = "dd-M-yyyy hh:mm:ss")
+    @Column(name = "unloadingDate")
+    private LocalDateTime unloadingDate;
     @NotEmpty
-    @Range(min = 1)
+    @Column(name = "paymentDayTime")
     private int paymentDayTime;
     @NotEmpty
+    @Column(name = "currency")
     private String currency;
     @NotEmpty
-    private int applicationNumber;
-    @OneToOne(targetEntity = Route.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id")
-    private int routeId;
-    @OneToOne(targetEntity = Transport.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id")
-    private int transportId;
-    @OneToOne(targetEntity = Customer.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id")
-    private int customerId;
-    @OneToOne(targetEntity = OrderExecutor.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id")
-    private int orderExecutorId;
+    @Column(name = "applicationsNumber")
+    private int applicationsNumber;
+    @ManyToOne(targetEntity = Route.class, fetch = FetchType.EAGER)
+    @JoinColumn(name = "routeId")
+    private Route routeId;
+    @ManyToOne(targetEntity = Transport.class, fetch = FetchType.EAGER)
+    @JoinColumn(name = "transportId")
+    private Transport transportId;
+    @ManyToOne(targetEntity = Customer.class, fetch = FetchType.EAGER)
+    @JoinColumn(name = "customerId")
+    private Customer customerId;
+    @ManyToOne(targetEntity = OrderExecutor.class, fetch = FetchType.EAGER)
+    @JoinColumn(name = "orderExecutorId")
+    private OrderExecutor orderExecutorId;
 
-    public Application(Date uploadDate, Date unloadingDate, int paymentDayTime, String currency, int applicationNumber, int routeId, int transportId, int customerId, int orderExecutorId) {
+    public Application(LocalDateTime uploadDate, LocalDateTime unloadingDate, int paymentDayTime, String currency, int applicationsNumber, Route routeId, Transport transportId, Customer customerId, OrderExecutor orderExecutorId) {
         this.uploadDate = uploadDate;
         this.unloadingDate = unloadingDate;
         this.paymentDayTime = paymentDayTime;
         this.currency = currency;
-        this.applicationNumber = applicationNumber;
+        this.applicationsNumber = applicationsNumber;
         this.routeId = routeId;
         this.transportId = transportId;
         this.customerId = customerId;

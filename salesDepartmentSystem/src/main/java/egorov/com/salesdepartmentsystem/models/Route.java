@@ -14,13 +14,17 @@ import javax.validation.constraints.NotEmpty;
 @Table(name = "routes")
 public class Route {
     @Id
+    @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @NotEmpty
+    @Column(name = "departurePoint")
     private String departurePoint;
     @NotEmpty
+    @Column(name = "arrivalPoint")
     private String arrivalPoint;
     @NotEmpty
+    @Column(name = "stoppingPoint")
     private String stoppingPoint;
 
     public Route(String departurePoint, String arrivalPoint, String stoppingPoint) {

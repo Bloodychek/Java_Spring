@@ -14,11 +14,14 @@ import javax.validation.constraints.NotEmpty;
 @Table(name = "typeofgoods")
 public class TypeOfGoods {
     @Id
+    @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @NotEmpty
+    @Column(name = "nameOfGoods")
     private String nameOfGoods;
     @NotEmpty
+    @Column(name = "unit")
     private String unit;
 
     public TypeOfGoods(String nameOfGoods, String unit) {
