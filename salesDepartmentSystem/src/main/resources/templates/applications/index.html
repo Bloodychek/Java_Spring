@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>application</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<h1 align="center">Application</h1>
+<p><a th:href="@{/applications/exportToExcel}" class="btn btn-primary btn-sm mb-2">Click to download to excel</a></p>
+<a th:href="@{/applications/create}" class="btn btn-primary btn-sm mb-3"> Add new record </a>
+<table class="table" align="center">
+    <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Upload date</th>
+        <th>Unload date</th>
+        <th>Payment day time</th>
+        <th>Currency</th>
+        <th>Application number</th>
+        <th>Route Id</th>
+        <th>Transport Id</th>
+        <th>Customer Id</th>
+        <th>Order executor Id</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="appl : ${applications}">
+        <td><span th:text="${appl.id}">Id</span></td>
+        <td><span th:text="${appl.uploadDate}">Upload date</span></td>
+        <td><span th:text="${appl.unloadingDate}">Unload date</span></td>
+        <td><span th:text="${appl.paymentDayTime}">Payment day time</span></td>
+        <td><span th:text="${appl.currency}">Currency</span></td>
+        <td><span th:text="${appl.applicationsNumber}">Application number</span></td>
+        <td><span th:text="${appl.routeId.departurePoint}">Route Id</span></td>
+        <td><span th:text="${appl.transportId.driverFIO}">Transport Id</span></td>
+        <td><span th:text="${appl.customerId.customerName}">Customer Id</span></td>
+        <td><span th:text="${appl.orderExecutorId.orderExecutorName}">Order executor Id</span></td>
+        <td> <a th:href="@{/applications/edit/{id}(id=${appl.id})}" class="btn btn-primary">Edit</a>
+            <a th:href="@{/applications/delete/{id}(id=${appl.id})}" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div th:if="${totalPages > 1}">
+    <div class="row col-sm-10">
+        <div class="col-sm-2">
+            Total Rows: [[${totalItems}]]
+        </div>
+        <div class="col-sm-1">
+            <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+      <a th:if="${currentPage != i}" th:href="@{'/applications/page/' + ${i}}">[[${i}]]</a>
+      <span th:unless="${currentPage != i}">[[${i}]]</span>
+            </span>
+        </div>
+        <div class="col-sm-1">
+            <a th:if="${currentPage < totalPages}" th:href="@{'/applications/page/' + ${currentPage + 1}}">Next</a>
+            <span th:unless="${currentPage < totalPages}">Next</span>
+        </div>
+
+        <div class="col-sm-1">
+            <a th:if="${currentPage < totalPages}" th:href="@{'/applications/page/' + ${totalPages}}">Last</a>
+            <span th:unless="${currentPage < totalPages}">Last</span>
+        </div>
+    </div>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

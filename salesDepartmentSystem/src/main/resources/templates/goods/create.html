@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>createGoods</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">Create</h1>
+<div class="container">
+    <form th:action="@{/goods/save}" th:object="${goods}" method="post" >
+        <select th:field="*{applicationId}" id="applicationId" class="form-control mb-4 col-4">
+            <option th:each="applicationId : ${applications}" th:value="${applicationId.getApplicationsNumber()}" th:text="${applicationId.applicationsNumber}">
+            </option>
+        </select>
+        <select th:field="*{typeOfGoodsId}" id="typeOfGoodsId" class="form-control mb-4 col-4">
+            <option th:each="typeOfGoodsId : ${typeofgoods}" th:value="${typeOfGoodsId.getNameOfGoods()}" th:text="${typeOfGoodsId.getNameOfGoods()}"></option>
+        </select>
+        <input type="text" th:field="*{countOfGoods}"
+               placeholder="Count of goods" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{productPrice}"
+               placeholder="Product price" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2"><a th:href = "@{/goods/index}"> Save record</a></button>
+    </form>
+</div>
+</body>
+</html>

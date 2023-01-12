@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>editGoods</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">Edit</h1>
+<div class="container">
+    <form action="#" th:action="@{/goods/save}" th:object="${goods}"
+          method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>Application Id</label>
+        <select th:field="*{applicationId}" id="applicationId" class="form-control mb-4 col-4">
+            <option th:each="applicationId : ${applications}" th:value="${applicationId}" th:text="${applicationId.applicationsNumber}">
+            </option>
+        </select>
+        <label>Type of goods Id</label>
+        <select th:field="*{typeOfGoodsId}" id="typeOfGoodsId" class="form-control mb-4 col-4">
+            <option th:each="typeOfGoodsId : ${typeofgoods}" th:value="${typeOfGoodsId}" th:text="${typeOfGoodsId.nameOfGoods}"></option>
+        </select>
+        <label>Count of goods</label>
+        <input type="text" th:field="*{countOfGoods}" class="form-control mb-4 col-4" placeholder="Count of goods">
+        <label>Product price</label>
+        <input type="text" th:field="*{productPrice}" class="form-control mb-4 col-4" placeholder="Product price">
+        <button type="submit" class="btn btn-info col-2"><a th:href = "@{/goods/index}"> Update record </a></button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>createApplications</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">Create</h1>
+<div class="container">
+    <form action="#" th:action="@{/applications/save}" th:object="${applications}" method="post" >
+        <input type="text" th:field="*{uploadDate}"
+               placeholder="Upload date" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{unloadingDate}"
+               placeholder="Unload date" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{paymentDayTime}"
+               placeholder="Payment day time" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{currency}"
+               placeholder="Currency" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{applicationsNumber}"
+               placeholder="Application number" class="form-control mb-4 col-4">
+        <select th:field="*{routeId.departurePoint}"
+                class="form-control mb-4 col-4">
+            <option th:each="appl : ${applications}" th:value="${appl.routeId.departurePoint}" th:text="${appl.routeId.departurePoint}"></option>
+        </select>
+        <select th:field="*{transportId.driverFIO}"
+                class="form-control mb-4 col-4"></select>
+        <select th:field="*{customerId.customerName}"
+                class="form-control mb-4 col-4"></select>
+        <select th:field="*{orderExecutorId.orderExecutorName}"
+                class="form-control mb-4 col-4"></select>
+        <button type="submit" class="btn btn-info col-2"><a th:href = "@{/applications/index}"> Save record</a></button>
+    </form>
+</div>
+</body>
+</html>

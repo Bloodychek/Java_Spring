@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>editTransports</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">Edit</h1>
+<div class="container">
+    <form action="#" th:action="@{/transports/save}" th:object="${transports}"
+          method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>Tractor</label>
+        <input type="text" th:field="*{tractor}" class="form-control mb-4 col-4" placeholder="tractor">
+        <label>Tractor brand</label>
+        <input type="text" th:field="*{tractorBrand}" class="form-control mb-4 col-4" placeholder="tractorBrand">
+        <label>Semitrailer</label>
+        <input type="text" th:field="*{semitrailer}" class="form-control mb-4 col-4" placeholder="semitrailer">
+        <label>Semi-trailer brand</label>
+        <input type="text" th:field="*{semi_trailerBrand}" class="form-control mb-4 col-4" placeholder="semi_trailerBrand">
+        <label>Driver FIO</label>
+        <input type="text" th:field="*{driverFIO}" class="form-control mb-4 col-4" placeholder="Driver FIO">
+        <button type="submit" class="btn btn-info col-2"><a th:href = "@{/customers/index}"> Update record </a></button>
+    </form>
+</div>
+</body>
+</html>

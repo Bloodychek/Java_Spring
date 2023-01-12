@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>editOrderExecutors</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">Edit</h1>
+<div class="container">
+    <form action="#" th:action="@{/orderexecutors/save}" th:object="${orderExecutors}"
+          method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>Order executor name</label>
+        <input type="text" th:field="*{orderExecutorName}" class="form-control mb-4 col-4" placeholder="Order executor name">
+        <label>Order executor phone</label>
+        <input type="text" th:field="*{orderExecutorPhone}" class="form-control mb-4 col-4" placeholder="Order executor phone">
+        <label>Order executor feedback</label>
+        <input type="text" th:field="*{orderExecutorFeedback}" class="form-control mb-4 col-4" placeholder="Order executor feedback">
+        <button type="submit" class="btn btn-info col-2"><a th:href = "@{/orderexecutors/index}"> Update record </a></button>
+    </form>
+</div>
+</body>
+</html>
